@@ -29,6 +29,8 @@ public static class app {
         int x = 1;
 
         Console.WriteLine("Starting Binmasters profile for " + name);
+        File.WriteAllText("/binmasters/names.txt", name + ", ");
+        
         //maingame
         Main:
             Console.WriteLine("Bins per second: " + bins_per_second);
@@ -60,6 +62,11 @@ public static class app {
                         goto Main;
                     }
                 }
+                if(bins_per_second == 100) {
+                    string ThousandBinsText = "Has 100 bins per second! ";
+                    File.WriteAllText("/binmasters/achievements.txt", ThousandBinsText);
+                }
+                
                 else {
                     goto Main;
                 }
