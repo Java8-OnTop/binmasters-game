@@ -4,16 +4,29 @@ using System.Linq;
 using System.Threading;
 using System.IO;
 
+/*
+MADE BY: Bin Studios
+http://binmasters.tk/
+
+Copyright 2022 Bin Studios
+Support@binmasters.tk
+*/
 public static class binmasters {
     public static T RandomElement<T>(this IEnumerable<T> coll) {
         var rnd = new Random();
         return coll.ElementAt(rnd.Next(coll.Count()));
     }
 
+    //custom threading
+    public static int Sleep(int ms) {
+        Thread.Sleep(ms);
+        return 1;
+    }
 
-    
+    //main method
     public static void Main() {
 
+        //start messages
         Console.WriteLine("-------------");
         Console.WriteLine("");
         Console.WriteLine("Started game.");
@@ -26,13 +39,17 @@ public static class binmasters {
         Console.WriteLine("");
         Console.WriteLine("-------------");
         Console.WriteLine("");
-        Thread.Sleep(2850);
-        Console.Clear();
-        Console.WriteLine("What is your name?: ");
-        string name = Console.ReadLine();
-        Thread.Sleep(750);
+
+        //end of start messages
+        Sleep(2850);
         Console.Clear();
         
+        // profile creation
+        Console.WriteLine("What is your name?: ");
+        string name = Console.ReadLine();
+        Sleep(750);
+        Console.Clear();
+
         //lists
         int[] price_per_bins = new[] { 200, 275, 822, 921, 112, 223, 375, 456, 765, 491, 379 };
 
@@ -47,36 +64,33 @@ public static class binmasters {
         
         //maingame
         Main:
+            // main gui
             Console.WriteLine("Bins per second: " + bins_per_second);
             Console.WriteLine("Bins: " + bins);
             Console.WriteLine("Money: $" + money);
             Console.WriteLine("1 Bin = $" + price);
             Console.WriteLine("Binmasters Profile: " + name);
+
+            //bin updating / main loop
             while(x <= 4) {
                 
-                Thread.Sleep(775);
+                Sleep(775);
+
+                //declare bin additions
                 int newbins = bins + bins_per_second;
                 bins = newbins;
                 Console.Clear();
+
+                //declare money additions
                 int addedmoney = money + price;
                 money = addedmoney;
-                if(bins_per_second <= 2){
-                    if(bins >= 100) {
-                        bins_per_second++;
-                        Console.WriteLine("- 100 Bins.");
-                        int naenaebins = bins - 100;
-                        bins = naenaebins;
-                        goto Main;
-                    }
-                }
-                if(bins_per_second >= 3) {
-                    if(bins >= 115) {
-                        bins_per_second++;
-                        Console.WriteLine("-115 Bins.");
-                        int manebins = bins - 150;
-                        bins = manebins;
-                        goto Main;
-                    }
+
+                // for if your bps is equal to or under 2
+                if(bins >= 100) {
+                    bins_per_second++;
+                    int addbins = bins - 100;
+                    bins = addbins;
+                    goto Main;
                 }
                 
                 else {
