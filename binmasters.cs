@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading;
 using System.IO;
 
-public static class app {
+public static class binmasters {
     public static T RandomElement<T>(this IEnumerable<T> coll) {
         var rnd = new Random();
         return coll.ElementAt(rnd.Next(coll.Count()));
@@ -13,10 +13,25 @@ public static class app {
 
     
     public static void Main() {
-        
+
+        Console.WriteLine("-------------");
+        Console.WriteLine("");
         Console.WriteLine("Started game.");
+        Console.WriteLine("");
+        Console.WriteLine("-------------");
+        Console.WriteLine("");
+        Console.WriteLine("-----HOW-TO-----");
+        Console.WriteLine("");
+        Console.WriteLine("Every 100 bins you get +1 Bins Per Second (BPS). The best tip is just to wait");
+        Console.WriteLine("");
+        Console.WriteLine("-------------");
+        Console.WriteLine("");
+        Thread.Sleep(2850);
+        Console.Clear();
         Console.WriteLine("What is your name?: ");
         string name = Console.ReadLine();
+        Thread.Sleep(750);
+        Console.Clear();
         
         //lists
         int[] price_per_bins = new[] { 200, 275, 822, 921, 112, 223, 375, 456, 765, 491, 379 };
@@ -28,14 +43,15 @@ public static class app {
         int bins = 0;
         int x = 1;
 
-        Console.WriteLine("Starting Binmasters profile for " + name);
-        File.WriteAllText("/binmasters/names.txt", name + ", ");
+
         
         //maingame
         Main:
             Console.WriteLine("Bins per second: " + bins_per_second);
             Console.WriteLine("Bins: " + bins);
             Console.WriteLine("Money: $" + money);
+            Console.WriteLine("1 Bin = $" + price);
+            Console.WriteLine("Binmasters Profile: " + name);
             while(x <= 4) {
                 
                 Thread.Sleep(775);
@@ -61,10 +77,6 @@ public static class app {
                         bins = manebins;
                         goto Main;
                     }
-                }
-                if(bins_per_second == 100) {
-                    string ThousandBinsText = "Has 100 bins per second! ";
-                    File.WriteAllText("/binmasters/achievements.txt", ThousandBinsText);
                 }
                 
                 else {
