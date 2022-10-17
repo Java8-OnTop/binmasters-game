@@ -1,6 +1,9 @@
 <a href="https://github.com/Java8-OnTop/binmasters-game/pulls">
   <img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/Java8-OnTop/binmasters-game?color=0088ff" />
 </a>
+<a href="https://github.com/Java8-OnTop/binmasters-game/issues">
+  <img alt="Issues" src="https://img.shields.io/github/issues/Java8-OnTop/binmasters-game?color=0088ff" />
+</a>
 
 # Binmasters
  - Binmasters is a game based on bins
@@ -16,3 +19,5 @@
  - Open cmd in the specified directory.
  - run `dotnet clean`, and `dotnet build`. Then run the specified `.EXE` file.
  - ONLY RECOMMENDED FOR PARANOID PEOPLE
+ ![logo](https://github.com/Java8-OnTop/binmasters-game/blob/main/favicon.png)
+
