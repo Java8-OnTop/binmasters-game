@@ -19,5 +19,4 @@
  - Open cmd in the specified directory.
  - run `dotnet clean`, and `dotnet build`. Then run the specified `.EXE` file.
  - ONLY RECOMMENDED FOR PARANOID PEOPLE
- ![logo](https://github.com/Java8-OnTop/binmasters-game/blob/main/favicon.png)
 
