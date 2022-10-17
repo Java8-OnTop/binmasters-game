@@ -1,5 +1,5 @@
 <a href="https://github.com/Java8-OnTop/binmasters-game/pulls">
-  <img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/anuraghazra/github-readme-stats?color=0088ff" />
+  <img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/Java8-OnTop/binmasters-game?color=0088ff" />
 </a>
 
 # Binmasters
